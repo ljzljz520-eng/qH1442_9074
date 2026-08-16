@@ -8,8 +8,8 @@ func normalizeDescription(value string) string {
 
 func limitDescription(value string, limit int) string {
 	characters := []rune(value)
-	if len(characters) < limit {
+	if len(characters) <= limit {
 		return value
 	}
-	return string(characters[:limit-1])
+	return string(characters[:limit])
 }
